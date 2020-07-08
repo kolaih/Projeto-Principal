@@ -1,0 +1,11 @@
+/*
+nesse arquivo aqui eu formato para ser arquivo js
+*/
+// entao eu preciso passar o caminho de configuração que é o config>database.js
+const path = require('path'); //que ajuda a lidar com caminhos aqui dentro do arquivo
+//__dirname é o diretorio onde esse arquivo(.sequelizerc) ta, que é o diretorio raiz
+//depois da segunda virgula é as pastas de caminho ate o database
+module.exports = {
+    config: path.resolve(__dirname, 'src', 'config', 'database.js'),
+    'migrations-path': path.resolve(__dirname, 'src', 'database', 'migrations')
+};
